@@ -1,6 +1,7 @@
 import {
     disableThemeEffects,
     emptyFill,
+    htmlTextRenderer,
     lightningChart,
     Themes,
     UIElementBuilders,
@@ -23,6 +24,7 @@ const chart = lightningChart({
         // NOTE: Effects are implemented quite performantly, but regardless, best performance is got without them.
         theme: disableThemeEffects(theme),
         animationsEnabled: false,
+        textRenderer: htmlTextRenderer,
     })
     .setTitleFillStyle(emptyFill)
     .setPadding({ right: 40 })
